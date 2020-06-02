@@ -2,7 +2,10 @@
   "name": "vscode-elixir",
   "displayName": "vscode-elixir",
   "description": "Elixir support for VSCode",
-  "keywords": ["Elixir", "syntax"],
+  "keywords": [
+    "Elixir",
+    "syntax"
+  ],
   "version": "1.1.0",
   "publisher": "mjmcloug",
   "icon": "images/logo.png",
@@ -19,8 +22,12 @@
     "url": "https://github.com/fr1zle/vscode-elixir/issues"
   },
   "homepage": "https://github.com/fr1zle/vscode-elixir",
-  "categories": ["Languages"],
-  "activationEvents": ["onLanguage:elixir"],
+  "categories": [
+    "Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:elixir"
+  ],
   "emmet.syntaxProfiles": {
     "HTML (Eex)": "html"
   },
@@ -28,19 +35,34 @@
     "languages": [
       {
         "id": "elixir",
-        "aliases": ["Elixir", "elixir"],
-        "extensions": [".ex", ".exs"],
+        "aliases": [
+          "Elixir",
+          "elixir"
+        ],
+        "extensions": [
+          ".ex",
+          ".exs"
+        ],
         "configuration": "./elixir.configuration.json"
       },
       {
         "id": "Eex",
-        "aliases": ["Eex", "eex"],
-        "extensions": [".eex"]
+        "aliases": [
+          "Eex",
+          "eex"
+        ],
+        "extensions": [
+          ".eex"
+        ]
       },
       {
         "id": "HTML (Eex)",
-        "aliases": ["HTML (Eex)"],
-        "extensions": [".html.eex"],
+        "aliases": [
+          "HTML (Eex)"
+        ],
+        "extensions": [
+          ".html.eex"
+        ],
         "configuration": "./html.eex.configuration.json"
       }
     ],
@@ -59,6 +81,16 @@
         "language": "HTML (Eex)",
         "scopeName": "text.html.elixir",
         "path": "./syntaxes/html (eex).json"
+      },
+      {
+        "scopeName": "markdown.elixir.codeblock",
+        "path": "./syntaxes/codeblock.json",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.elixir": "elixir"
+        }
       }
     ],
     "snippets": [
@@ -71,7 +103,10 @@
       {
         "name": "mixCompileError",
         "owner": "elixir",
-        "fileLocation": ["relative", "${workspaceRoot}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}"
+        ],
         "severity": "error",
         "pattern": {
           "regexp": "^\\*\\* \\((\\w+)\\) (.*):(\\d+): (.*)$",
@@ -83,7 +118,10 @@
       {
         "name": "mixCompileWarning",
         "owner": "elixir",
-        "fileLocation": ["relative", "${workspaceRoot}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}"
+        ],
         "severity": "warning",
         "pattern": [
           {
@@ -101,7 +139,10 @@
       {
         "name": "mixTestFailure",
         "owner": "elixir",
-        "fileLocation": ["relative", "${workspaceRoot}"],
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}"
+        ],
         "severity": "warning",
         "pattern": [
           {
